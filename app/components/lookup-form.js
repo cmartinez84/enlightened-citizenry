@@ -5,10 +5,9 @@ export default Ember.Component.extend({
     zipLookup() {
       var params = {
         searchVar: "legislators/locate",
-        zip: this.get('zip'),
-        query: '&zip=' + this.get('zip')
+        query: '&zip=' + this.get('zip'),
+        type: "legislators"
       };
-      console.log(params);
       this.sendAction('zipLookup', params);
     }
   }
