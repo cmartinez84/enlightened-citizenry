@@ -1,0 +1,14 @@
+{{#if (gt subcommittees.length 0)}}
+{{#each subcommittees as |committee|}}
+
+  <li> <h3>{{committee.name}} </h3> - <h4>{{committee.chamber}}</h4></li>
+  {{log committee.committee_id}}
+
+  {{/each}}
+
+{{else}}
+
+    <h1>sorry, no subcommittees found</h1>
+
+
+{{/if }}

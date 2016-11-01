@@ -26,6 +26,14 @@ export default Ember.Component.extend({
         type: "bills"
       };
       this.sendAction('toLookUp', params);
+    },
+    getSubCommittees(){
+      var parent_committee_id = this.get('parent_committee_id');
+      var params = {
+        queryString: "committees?parent_committee_id="+ parent_committee_id +"&apikey="+this.get('key'),
+        type: "subcommittees"
+      };
+      this.sendAction('toLookUp', params);
     }
   }
 });

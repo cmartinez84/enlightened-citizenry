@@ -3,11 +3,15 @@
 {{/if}}
 
 {{#if (eq model.type "committees")}}
-  {{committees-results committees=model.results}}
+  {{committees-results committees=model.results toLookUp="toLookUp"}}
 {{/if}}
 
 {{#if (eq model.type "bills")}}
 <ol>
   {{bills-results bills=model.results}}
 </ol>
+{{/if}}
+
+{{#if (eq model.type "subcommittees")}}
+  {{subcommittee-results subcommittees=model.results toLookUp="toLookUp"}}
 {{/if}}
