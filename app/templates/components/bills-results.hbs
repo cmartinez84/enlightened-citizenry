@@ -1,3 +1,16 @@
+
+<button {{action "billsLookup" 1}}>1</button>
+<button {{action "billsLookup" 2}}>2</button>
+<button {{action "billsLookup" 3}}>3</button>
+<button {{action "billsLookup" 4}}>4</button>
+<button {{action "billsLookup" 5}}>5</button>
+<button {{action "billsLookup" 6}}>6</button>
+<button {{action "billsLookup" 7}}>7</button>
+<button {{action "billsLookup" 8}}>8</button>
+<button {{action "billsLookup" 9}}>9</button>
+<button {{action "billsLookup" 10}}>10</button>
+
+
 {{#each bills as |bill|}}
   <li> {{bill.bill_id}}  - {{bill.short_title}}</li>
 {{/each}}

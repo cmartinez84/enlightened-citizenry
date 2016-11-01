@@ -1,17 +1,25 @@
-{{#if (eq model.type "legislators")}}
-  {{legislator-results legislators=model.results}}
-{{/if}}
+<div class="row">
+  <div class="col-sm-4">
+    {{#if (eq model.type "legislators")}}
+      {{legislator-results legislators=model.results}}
+    {{/if}}
 
-{{#if (eq model.type "committees")}}
-  {{committees-results committees=model.results toLookUp="toLookUp"}}
-{{/if}}
+    {{#if (eq model.type "committees")}}
+      {{committees-results committees=model.results toLookUp="toLookUp" getSubcommittees="getSubcommittees"}}
+    {{/if}}
 
-{{#if (eq model.type "bills")}}
-<ol>
-  {{bills-results bills=model.results}}
-</ol>
-{{/if}}
-
-{{#if (eq model.type "subcommittees")}}
-  {{subcommittee-results subcommittees=model.results toLookUp="toLookUp"}}
-{{/if}}
+    {{#if (eq model.type "bills")}}
+    <ol>
+      {{bills-results bills=model.results toLookUp="toLookUp"}}
+    </ol>
+    {{/if}}
+  </div>
+  <div class="col-sm-4">
+        {{#if (eq model.type "subcommittees")}}
+          {{subcommittee-results subcommittees=model.results toLookUp="toLookUp" getSubcommittees="getSubcommittees"}}
+        {{/if}}
+  </div>
+ <div class="col-sm-4">
+      <img class="selena" src="https://pbs.twimg.com/media/CHKdkyNWQAAOEXm.png" alt="" />
+  </div>
+</div>

@@ -1,3 +1,41 @@
 .hidden{
   height: 1px !important;
 }
+.jumbotron{
+  background: url('http://govcomm.us/zenn/images/page18.gif') center center no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+.jumbotron *{
+  display: inline;
+}
+.jumbotron h1{
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  text-shadow:
+  13px 14px 0 pink,
+    10px 9px 0 pink,
+      7px 6px 0 pink,
+      4px 3px 0 pink,
+      1px 1px 0 pink,
+      5px 5px 1px red;
+}
+.jumbotron h3{
+  color: white;
+}
+
+*:hover{
+  text-decoration: none !important;
+}
+.strike{
+  text-decoration: line-through;
+  text-shadow: 3  px 3px black;
+}
+.jumbotron form{
+  position: absolute;
+  border-bottom: 0;
+}
+.jumbotron form * {
+  display: inline-block;
+}
+.co

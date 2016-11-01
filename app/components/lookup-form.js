@@ -20,7 +20,7 @@ export default Ember.Component.extend({
       this.sendAction('toLookUp', params);
     },
     billsLookup() {
-      var query = "&page=1";
+      var query = "&page=1&per_page=50";
       var params = {
         queryString: "bills?apikey="+this.get('key') +query,
         type: "bills"

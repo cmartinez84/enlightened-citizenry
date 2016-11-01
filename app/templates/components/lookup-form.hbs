@@ -1,21 +1,21 @@
-<h1>Legislator Lookup</h1>
 
 <form>
   <div class="form-group">
     <label for="zip">Zip</label>
-    {{input value=zip id="zip"}}
+    {{input value=zip id="zip" placeholder="enter zip code"}}
   </div>
 
   <button class="btn btn-primary" {{action 'zipLookup'}}>Submit</button>
-</form>
-<br />
-<div class ="committeeLookup">
-  <button class="btn btn-primary" {{action 'committeesLookup'}}>List of Committees</button>
-</div>
+  <div class ="committeeLookup">
+    <button class="btn btn-primary" {{action 'committeesLookup'}}>List of Committees</button>
+  </div>
 
-<div class ="billsLookup">
-  <button class="btn btn-success" {{action 'billsLookup'}}>List of Bills</button>
-</div>
+  <div class ="billsLookup">
+    <button class="btn btn-success" {{action 'billsLookup'}}>List of Bills</button>
+  </div>
+</form>
+<!-- <br /> -->
+
 <!-- <div class="">
   <h3>Search by sub committe by parent committe id </h3>
 {{input value=parent_committee_id id="parent_committee_id"}}

@@ -4,12 +4,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   key: config.myApiKey,
   actions: {
-    getSubCommittees(committee_id){
+    getSubcommittees(committee_id){
       var params = {
         queryString: "committees?parent_committee_id="+ committee_id +"&apikey="+this.get('key'),
         type: "subcommittees"
       };
-      this.sendAction('toLookUp', params);
+      this.sendAction('getSubcommittees', params);
     }
   }
 });
