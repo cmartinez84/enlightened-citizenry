@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('results', {path: '/results/:searchVar/:query/:type'});
+  this.route('results', {path: '/results/:queryString/:type'});
 });
 
 export default Router;

@@ -1,30 +1,31 @@
+import config from '../config/environment';
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  key: config.myApiKey,
   actions: {
     zipLookup() {
       var params = {
-        searchVar: "legislators/locate",
-        query: '&zip=' + this.get('zip'),
+        queryString: "legislators/locate?apikey="+this.get('key')+'&zip=' + this.get('zip'),
+        // query: '&zip=' + this.get('zip'),
         type: "legislators"
       };
-      this.sendAction('zipLookup', params);
+      this.sendAction('toLookUp', params);
     },
     committeesLookup() {
       var params = {
-        searchVar: "committees",
-        query:"&",
+        queryString: "committees?subcommittee=false&apikey="+this.get('key'),
         type: "committees"
       };
-      this.sendAction('committeesLookup', params);
+      this.sendAction('toLookUp', params);
     },
     billsLookup() {
+      var query = "&page=1";
       var params = {
-        searchVar: "bills",
-        query:"&",
+        queryString: "bills?apikey="+this.get('key') +query,
         type: "bills"
       };
-      this.sendAction('billsLookup', params);
+      this.sendAction('toLookUp', params);
     }
   }
 });
