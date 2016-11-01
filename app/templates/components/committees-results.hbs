@@ -1,4 +1,3 @@
 {{#each committees as |committee|}}
   <li {{action "getSubcommittees" committee.committee_id}}> {{committee.name}}  - {{committee.chamber}}</li>
-  {{log committee.committee_id}}
 {{/each}}
