@@ -9,6 +9,22 @@ export default Ember.Component.extend({
         type: "legislators"
       };
       this.sendAction('zipLookup', params);
+    },
+    committeesLookup() {
+      var params = {
+        searchVar: "committees",
+        query:"&",
+        type: "committees"
+      };
+      this.sendAction('committeesLookup', params);
+    },
+    billsLookup() {
+      var params = {
+        searchVar: "bills",
+        query:"&",
+        type: "bills"
+      };
+      this.sendAction('billsLookup', params);
     }
   }
 });
